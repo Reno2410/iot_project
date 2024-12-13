@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Prediction System</title>
+    <!-- Introduce CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Crime Prediction System</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="intro">
+        <p>
+            Located in Baltimore, Maryland, USA, Johns Hopkins University (JHU) is renowned for its world-class academics but is also humorously referred to by some as one of the most "dangerous" universities. Frequent crimes near JHU can raise concerns about personal safety for students. This platform aims to provide travel advice within a 1.5-mile radius of JHU, helping people stay vigilant and avoid becoming victims of crime.
+        </p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- Historical Data Section -->
+        <div class="section">
+            <h2>Explore Historical Data Around JHU</h2>
+            <a href="/visualization" class="button">Historical Data Visualization</a>
+        </div>
+
+        <!-- Future Crime Prediction Section -->
+        <div class="section">
+            <h2>Predict Crime Probability and Type in the Next Hour</h2>
+            <a href="/predict" class="button">Predict Future Crimes</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-note">
+            This project strives to continuously improve prediction accuracy and aims to expand the scope of monitored crime records, providing safer living conditions for residents in more areas.
+        </div>
+        <p>&copy; 2024 Crime Prediction System </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Visualizations</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/visualization.css') }}">
+</head>
+<body>
+    <h1>Crime Data Interactive Visualizations</h1>
+
+    <!-- Crime Map -->
+    <div class="grid-container">
+        <div class="chart-container crime-map-container">
+            <div class="chart-title">Crime Map</div>
+            <iframe src="{{ url_for('static', filename='crime_map.html') }}"></iframe>
+        </div>
+    </div>
+
+    <!-- Other Charts -->
+    <div class="two-column-container">
+        <div class="chart-container">
+            <div class="chart-title">Crime Count by Category</div>
+            <iframe src="{{ url_for('static', filename='crime_count_by_category.html') }}" height="400"></iframe>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Crime Count by Gender and Type</div>
+            <iframe src="{{ url_for('static', filename='crime_count_by_gender_and_crime_code.html') }}" height="400"></iframe>
+        </div>
+    </div>
+
+    <div class="two-column-container">
+        <div class="chart-container">
+            <div class="chart-title">Crime Distribution by Age Groups</div>
+            <iframe src="{{ url_for('static', filename='crime_distribution_by_age_groups.html') }}" height="400"></iframe>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Daily Crime Counts</div>
+            <iframe src="{{ url_for('static', filename='daily_crime_counts.html') }}" height="400"></iframe>
+        </div>
+    </div>
+    <div class="two-column-container">
+        <div class="chart-container">
+            <div class="chart-title">Crime Frequency by Weather Condition</div>
+            <iframe src="{{ url_for('static', filename='crime_frequency_by_weather_condition.html') }}" height="400"></iframe>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Crime Distribution by Hour and Weather Condition</div>
+            <iframe src="{{ url_for('static', filename='crime_by_hour_weather_interactive.html') }}" height="400"></iframe>
+        </div>
+    </div>
+    
+
+    <!-- Return to Home Button -->
+    <div class="button-container">
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="{{ url_for('static', filename='js/visualization.js') }}"></script>
+</body>
+</html>
+

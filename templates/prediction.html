@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Prediction Near JHU</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prediction.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crime Prediction Near JHU</h1>
+        <form id="predictForm">
+            <label for="latitude">Latitude:</label>
+            <input type="text" name="latitude" id="latitude" required>
+            
+            <label for="longitude">Longitude:</label>
+            <input type="text" name="longitude" id="longitude" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Results Section -->
+        <div class="results" id="results" style="display: none;">
+            <h2>Prediction Results</h2>
+            <p><strong>Latitude:</strong> <span id="resultLatitude"></span></p>
+            <p><strong>Longitude:</strong> <span id="resultLongitude"></span></p>
+            <p><strong>Weather:</strong> <span id="resultWeather"></span></p>
+            <p><strong>Temperature:</strong> <span id="resultTemperature"></span>°F</p>
+            <p><strong>Humidity:</strong> <span id="resultHumidity"></span>%</p>
+            <p><strong>Predicted Crime Type:</strong> <span id="resultCrimeType"></span></p>
+            <p><strong>Probability:</strong> <span id="resultProbability"></span>%</p>
+            <div class="recommendation" id="resultRecommendation"></div>
+        </div>
+
+        <!-- Return to Home Button -->
+        <div class="home-button-container">
+            <button id="homeButton">Return to Home</button>
+        </div>
+    </div>
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+</body>
+</html>

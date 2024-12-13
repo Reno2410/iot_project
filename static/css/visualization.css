@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Crime Map */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 单列布局 */
+    gap: 20px;
+    margin: 20px 0;
+}
+.chart-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+.chart-container iframe {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Special layout for Crime Map */
+.crime-map-container iframe {
+    height: 600px; /* 更大高度 */
+}
+
+/* Two-column layout for other charts */
+.two-column-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 两列布局 */
+    gap: 20px;
+}
+
+/* Return to Home Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
